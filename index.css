@@ -11,6 +11,9 @@ body::before {
 .d-inline-block {
   display: inline-block;
 }
+.d-none {
+  display: none;
+}
 .mb-0 {
   margin-bottom: 0;
 }
