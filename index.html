@@ -1,0 +1,73 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>10 Sec Maths Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="mb-3">10 Sec Maths Game</h1>
+          <div class="row text-center">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-xs-12 col-md-6 border bg-white pb-1">
+              <h4 class="mb-0">Choose your operators:</h4>
+              <div class="checkbox d-inline-block me-2 my-1 mb-0">
+                <label>
+                  <input type="checkbox" name="operators" id="operator1" value="+" checked/><span class="ms-1 fs-3"><i class="fa-solid fa-plus"></i></span>
+                </label>
+              </div>
+              <div class="checkbox d-inline-block me-2 my-1 mb-0">
+                <label>
+                  <input type="checkbox" name="operators" id="operator2" value="-" /><span class="ms-1 fs-3"><i class="fa-solid fa-minus"></i></span>
+                </label>
+              </div>
+              <div class="checkbox d-inline-block me-2 my-1 mb-0">
+                <label>
+                  <input type="checkbox" name="operators" id="operator3" value="*" /><span class="ms-1 fs-3"><i class="fa-solid fa-asterisk"></i></span>
+                </label>
+              </div>
+              <div class="checkbox d-inline-block my-1 mb-0">
+                <label>
+                  <input type="checkbox" name="operators" id="operator4" value="/" /><span class="ms-1 fs-3"><i class="fa-solid fa-divide"></i></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">&nbsp;</div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-xs-12 col-md-6">
+              <h1><span id="timeLeft">0</span><span class="fs-6"> second(s) left</span></h1>
+              <div id="questionArea" class="border">
+                <h1 id="question"></h1>
+                <!-- remove this before submitting -->
+                <p id="result"></p>
+                <h4>Your Answer:</h4>
+                <input type="number" step="1" id="answer" class="text-center" />
+              </div>
+            </div>
+            <div class="col-md-3">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-12 col-md-3 mt-2">
+          <h4>Your Score: <span id="score" class="text-green fs-1 ms-2">0</span></h4>
+        </div>
+        <div class="col-12 col-md-3 mt-2">
+          <h4>High Score: <span id="highScore" class="fs-1 ms-2">0</span></h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
