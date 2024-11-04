@@ -4,6 +4,10 @@ $(document).ready(function () {
   var timeLeft = 10;
   var score = 0;
   
+  // the number limit slider
+  $(document).on('input', '#numberSlider', function() {
+    $('#sliderValue').html( $(this).val() );
+  });
   // update the time Left
   var updateTimeLeft = function (number) {
     timeLeft += number;
@@ -54,8 +58,9 @@ $(document).ready(function () {
     //var operators = ["+", "-", "*", "/"];
     var operator = operators[Math.floor(Math.random() * operators.length)];
     
-    var number1 = getNumber(10);
-    var number2 = getNumber(10);
+    var max = Number($("#sliderValue").html());
+    var number1 = getNumber(max);
+    var number2 = getNumber(max);
     question.qString = String(number1) + " " + operator + " " + String(number2);
     
     switch (operator) {
