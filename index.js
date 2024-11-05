@@ -91,8 +91,7 @@ $(document).ready(function () {
   var updateQuestion = function () {
     question = getQuestion();
     $("#question").text(question.qString);
-    // ***** remove this before submittting *****
-    $("#result").text(question.result);
+    $("#answer").focus();
   };
   
   // check the player's answer
@@ -113,6 +112,5 @@ $(document).ready(function () {
   
   // show a new question
   updateQuestion();
-  $("#answer").focus();
   
 });
