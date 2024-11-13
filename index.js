@@ -73,6 +73,7 @@ $(document).ready(function () {
       case '-':
         if (Number(number2) > Number(number1)) {
           question.result = number2 - number1;
+          question.qString = String(number2) + " " + operator + " " + String(number1);
         } else {
           question.result = number1 - number2;
         }
