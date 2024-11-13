@@ -54,16 +54,11 @@ $(document).ready(function () {
     var operators = $("input[type='checkbox']:checked").map(function () {
       return $(this).val();
     }).get();
-    console.log(operators);
     //var operators = ["+", "-", "*", "/"];
     var operator = operators[Math.floor(Math.random() * operators.length)];
-    console.log("operator: " + operator);
     var max = Number($("#sliderValue").html());
     var number1 = getNumber(max);
     var number2 = getNumber(max);
-    
-    console.log("number2: " + number2 + "  number1: " + number1);
-    console.log(Number(number2) > Number(number1));
     question.qString = String(number1) + " " + operator + " " + String(number2);
     
     switch (operator) {
@@ -83,11 +78,10 @@ $(document).ready(function () {
         break;
       case '/':
         var dividend = number1 * number2;
-        question.result = dividend / number1;
+        question.result = number2;
         question.qString = String(dividend) + " " + operator + " " + String(number1);
         break;
     }
-    console.log(question.qString);
     
     return question;
   };
