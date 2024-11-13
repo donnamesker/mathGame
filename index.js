@@ -87,6 +87,7 @@ $(document).ready(function () {
         question.qString = String(dividend) + " " + operator + " " + String(number1);
         break;
     }
+    console.log(question.qString);
     
     return question;
   };
