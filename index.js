@@ -63,7 +63,7 @@ $(document).ready(function () {
     var number2 = getNumber(max);
     
     console.log("number2: " + number2 + "  number1: " + number1);
-    console.log(number2 > number1);
+    console.log(Number(number2) > Number(number1));
     question.qString = String(number1) + " " + operator + " " + String(number2);
     
     switch (operator) {
@@ -71,7 +71,7 @@ $(document).ready(function () {
         question.result = number1 + number2;
         break;
       case '-':
-        if (number2 > number1) {
+        if (Number(number2) > Number(number1)) {
           question.result = number2 - number1;
         } else {
           question.result = number1 - number2;
