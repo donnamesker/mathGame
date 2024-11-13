@@ -63,6 +63,7 @@ $(document).ready(function () {
     var number2 = getNumber(max);
     
     console.log("number2: " + number2 + "  number1: " + number1);
+    console.log(number2 > number1);
     question.qString = String(number1) + " " + operator + " " + String(number2);
     
     switch (operator) {
