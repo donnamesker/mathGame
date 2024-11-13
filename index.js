@@ -61,8 +61,10 @@ $(document).ready(function () {
     var max = Number($("#sliderValue").html());
     var number1 = getNumber(max);
     var number2 = getNumber(max);
+    
+    console.log("number2: " + number2 + "  number1: " + number1);
     question.qString = String(number1) + " " + operator + " " + String(number2);
-    console.log("number 2: " + number2 + "  number1: " + number1 + "  number2 > number1: " + number2 > number1);
+    
     switch (operator) {
       case '+':
         question.result = number1 + number2;
