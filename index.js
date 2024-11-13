@@ -57,7 +57,7 @@ $(document).ready(function () {
     console.log(operators);
     //var operators = ["+", "-", "*", "/"];
     var operator = operators[Math.floor(Math.random() * operators.length)];
-    
+    console.log("operator: " + operator);
     var max = Number($("#sliderValue").html());
     var number1 = getNumber(max);
     var number2 = getNumber(max);
